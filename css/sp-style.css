@@ -1,0 +1,310 @@
+@charset "UTF-8";
+@media screen and (max-width: 1240px) {
+  .w_inner {
+    width: 100%;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  body.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* --------------------------------------------
+   * 　サイドバーレイアウト
+   * -------------------------------------------- */
+  #container:not(.container_front, .page_404) {
+    flex-direction: column;
+  }
+  #container:not(.container_front, .page_404) main {
+    width: 100px;
+    min-width: 100%;
+  }
+  #container:not(.container_front, .page_404) .container_side {
+    width: 100%;
+    min-width: 100%;
+    margin: 30px 0 0 !important;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+
+  /* --------------------------------------------
+   * 　ナビ
+   * -------------------------------------------- */
+  header .nav_wrap nav {
+    display: none;
+  }
+  header .nav_wrap.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    width: 100%;
+    height: 100vh;
+    background: #ef0846;
+    padding: 75px 30px;
+  }
+  header .nav_wrap.open #nav_open {
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    z-index: 9999;
+  }
+  header .nav_wrap.open nav {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  header .nav_wrap.open nav ul {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    flex-direction: column;
+  }
+  header .nav_wrap.open nav ul li {
+    width: 100%;
+    border-bottom: 1px dotted #ddd;
+    margin-left: 0 !important;
+  }
+  header .nav_wrap.open nav ul li a {
+    padding: 13px 3px 8px;
+    display: block;
+  }
+  header .nav_wrap.open nav ul li:last-child {
+    border: none;
+    margin-top: 30px;
+    text-align: center;
+  }
+  header .nav_wrap #nav_open {
+    display: block;
+    width: 70px;
+    height: 60px;
+    position: relative;
+    z-index: 9999;
+  }
+  header .nav_wrap #nav_open span {
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 25px);
+    transition: all ease 0.15s;
+  }
+  header .nav_wrap #nav_open span:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 10px;
+    transition: all ease 0.15s;
+  }
+  header .nav_wrap #nav_open span:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: -10px;
+    transition: all ease 0.15s;
+  }
+  header .nav_wrap.open #nav_open span {
+    background: #ef0846;
+  }
+  header .nav_wrap.open #nav_open span:before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: all ease 0.15s;
+    background: #fff;
+  }
+  header .nav_wrap.open #nav_open span:after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: all ease 0.15s;
+    background: #fff;
+  }
+}
+@media screen and (max-width: 767px) {
+  .off_mobile {
+    display: none !important;
+  }
+
+  .on_mobile {
+    display: block !important;
+  }
+
+  .page_head,
+  .section_head {
+    font-size: 2.8rem;
+  }
+
+  /* --------------------------------------------
+   * 　フロント
+   * -------------------------------------------- */
+  .top_key_visual {
+    height: 240px;
+  }
+  .subpage_key_visual{
+    height:100px;
+  }
+  .container_front .course_card {
+    margin-bottom: 45px;
+  }
+  .container_front .course_card:last-child {
+    margin-bottom: 0;
+  }
+  .container_front .front_course .course_card:nth-child(n+4){
+    margin-top: 0;
+  }
+  /* --------------------------------------------
+   * 　お知らせ一覧
+   * -------------------------------------------- */
+  .news_list_wrap ul li a .ttl {
+    display: flex;
+    flex-direction: column;
+  }
+  /* --------------------------------------------
+   * 　お知らせ一覧（重要なお知らせ）
+   * -------------------------------------------- */
+  .front_important_news {
+    margin-bottom: 20px;
+  }
+  .front_important_news .important_news_wrap {
+    display: block;
+  }
+  .front_important_news .head {
+    margin-bottom: 10px;
+  }
+  .front_important_news ul li .date{
+    width: 100px;
+    min-width: 100px;
+  }
+  /* --------------------------------------------
+   * 　コース紹介
+   * -------------------------------------------- */
+  .container_course .course_wrap {
+    margin-bottom: 20px;
+  }
+  .container_course .course_wrap > a {
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+  }
+  .container_course .course_wrap > a .img {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 10px;
+  }
+  .container_course .course_wrap > a .img img {
+    width: 100%;
+  }
+  .container_course .course_wrap > a .txtarea .course_name {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .container_course .course_wrap > a .txtarea .btn_common {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .container_course_detail .block {
+    flex-direction: column;
+  }
+  .container_course_detail .block .img {
+    width: 100%;
+    min-width: 100%;
+    margin-right: 0;
+  }
+  .container_course_detail .block .img img {
+    width: 100%;
+  }
+  .container_course_detail .block .txtarea {
+    margin-top: 10px;
+  }
+  .container_course_detail .block .txtarea .head {
+    margin-bottom: 10px;
+  }
+  /* --------------------------------------------
+ * 　コース紹介 / 一覧（カスタム投稿タイプ）
+ * -------------------------------------------- */
+  .container_archive_course ul.course_list li a {
+    flex-direction: column;
+  }
+  .container_archive_course ul.course_list li a .img {
+    width: 100%;
+    min-width: 100%;
+    margin-right: 0;
+  }
+  .container_archive_course ul.course_list li a .img img {
+    width: 100%;
+  }
+  .container_archive_course ul.course_list li a .related_terms {
+    margin-bottom: 15px;
+  }
+  /* --------------------------------------------
+   * 　校舎案内
+   * -------------------------------------------- */
+  .container_school_bldg .school_list_wrap > ul li {
+    flex-direction: column;
+  }
+  .container_school_bldg .school_list_wrap > ul li .img {
+    width: 100%;
+    min-width: 100%;
+    margin-right: 0;
+  }
+  .container_school_bldg .school_list_wrap > ul li .img img {
+    width: 100%;
+  }
+  .container_school_bldg .school_list_wrap > ul li .txtarea {
+    padding-top: 10px;
+  }
+
+  /* --------------------------------------------
+   * 　お問合せフォーム
+   * -------------------------------------------- */
+  .wpcf7 table .flexwrap {
+    justify-content: flex-start;
+  }
+  .wpcf7 table .td_left {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px 0 3px;
+  }
+  .wpcf7 table .td_right {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  /* --------------------------------------------
+   * 　フッター
+   * -------------------------------------------- */
+  .footer_nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer_nav ul li {
+    text-align: center;
+    border-bottom: 1px dotted #dddddd;
+  }
+  .footer_nav ul li a {
+    display: block;
+    padding: 8px 0 3px;
+  }
+}
+
+/*# sourceMappingURL=sp-style.css.map */
